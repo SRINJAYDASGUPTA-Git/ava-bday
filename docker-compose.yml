@@ -1,0 +1,8 @@
+services:
+  avanti-universe:
+    build: .
+    image: avanti-universe:latest
+    container_name: avanti-universe
+    restart: unless-stopped
+    ports:
+      - "3003:80"
