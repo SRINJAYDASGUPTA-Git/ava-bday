@@ -1,0 +1,223 @@
+<section
+    class="canva-section chapter text-center relative overflow-hidden"
+    data-template-id="finale-section"
+    id="finale"
+    style="background:#292532"
+>
+    <div class="glow" style="bottom:-140px;right:5%;background:#c8947050"></div>
+
+    <div class="chapter-inner flex flex-col items-center">
+        <p
+            class="canva-text eyebrow mb-6"
+            data-template-id="finale-kicker"
+            style="color:rgb(229,183,183);font-weight:700;font-size:13px"
+        >
+            One more wish, just for you
+        </p>
+
+        <div
+            aria-label="Illustration of a birthday cake with three glowing candles"
+            class="cake mb-8"
+            id="birthday-cake"
+            role="img"
+        >
+            <div class="cake-plate"></div>
+            <div class="cake-base"></div>
+            <div class="cake-icing"></div>
+            <div class="candle one"></div>
+            <div class="candle two"></div>
+            <div class="candle three"></div>
+        </div>
+
+        <button
+            aria-describedby="blow-hint"
+            aria-pressed="false"
+            class="canva-button blow-button rounded-full px-7 py-3 font-semibold"
+            data-template-id="blow-candles-button"
+            id="blow-candles"
+            type="button"
+        >
+            Blow the candles
+        </button>
+
+        <span
+            aria-live="polite"
+            class="canva-text mt-3 text-sm"
+            data-template-id="blow-candles-hint"
+            id="blow-hint"
+            style="color:rgb(232,197,195);font-size:14px"></span>
+
+        <div aria-hidden="true" class="confetti-field" id="confetti-field">
+        </div>
+
+        <div
+            class="birthday-note quiet-card mt-8 w-full max-w-xl p-6 text-left"
+            data-template-id="birthday-note-area"
+            style="background:rgb(37,46,61)"
+        >
+            <label
+                class="canva-text block mb-3 font-semibold"
+                for="birthday-wish"
+                style="color:rgb(248,241,230);font-weight:600;font-size:16px"
+            >
+                Your birthday note
+            </label>
+
+            <textarea
+                aria-label="Write your birthday wish here"
+                class="canva-input w-full rounded-xl p-4 leading-relaxed"
+                id="birthday-wish"
+                placeholder="Write your birthday wish here…"
+                style="color:rgb(248,241,230);font-size:17px"></textarea>
+
+            <button
+                class="blow-button rounded-full px-6 py-3 mt-4 font-semibold mx-auto block"
+                id="send-wish"
+                type="button"
+            >
+                Send my wish
+            </button>
+
+            <p id="send-wish-status" class="mt-3 text-sm w-full text-center" aria-live="polite">
+            </p>
+        </div>
+
+        <h2
+            class="canva-text chapter-title max-w-3xl mt-9"
+            data-template-id="finale-title"
+            style="color:rgb(248,241,230);font-weight:500;font-size:26px"
+        >
+            Your Universe, Always
+        </h2>
+
+        <div class="fine-rule my-8"></div>
+
+        <p
+            class="canva-text body-copy max-w-xl"
+            data-template-id="finale-copy"
+            style="color:rgb(223,214,204);font-size:18px"
+        >
+            Happy birthday, Avanti. May you feel loved in the ordinary moments,
+            brave in the uncertain ones, and wonderfully yourself through all of
+            them. Thank you for being the light at the center of this little
+            universe.
+        </p>
+
+        <p
+            class="canva-text serif mt-9 max-w-2xl"
+            data-template-id="finale-wish"
+            style="color:rgb(232,197,195);font-size:25px"
+        >
+            Here’s to more stories, more songs, more reasons to celebrate — and
+            a beautiful year ahead.
+        </p>
+
+        <a
+            class="canva-link scroll-pill mt-12"
+            data-template-id="back-to-top"
+            href="#top"
+            style="color:rgb(248,241,230);font-weight:600;font-size:15px"
+        >
+            Back to the stars ↑
+        </a>
+
+        <span aria-hidden="true" class="mt-10 text-[#d6a9a8] text-2xl">
+            ✦ &nbsp; ✧ &nbsp; ✦
+        </span>
+    </div>
+</section>
+
+<script>
+    const cake = document.getElementById("birthday-cake");
+    const button = document.getElementById("blow-candles");
+    const hint = document.getElementById("blow-hint");
+    const field = document.getElementById("confetti-field");
+    const note = document.querySelector(
+        '[data-template-id="birthday-note-area"]',
+    );
+    const wishInput = document.getElementById("birthday-wish");
+    const sendWishButton = document.getElementById("send-wish");
+    const sendWishStatus = document.getElementById("send-wish-status");
+
+    if (
+        cake instanceof HTMLElement &&
+        button instanceof HTMLButtonElement &&
+        hint instanceof HTMLElement &&
+        field instanceof HTMLElement &&
+        note instanceof HTMLElement
+    ) {
+        const colors = ["#d7b878", "#e5b7b7", "#f8f1e6", "#89a6c4"];
+
+        button.addEventListener("click", () => {
+            if (button.disabled) return;
+
+            button.disabled = true;
+            button.setAttribute("aria-pressed", "true");
+            cake.classList.add("candle-blown");
+            hint.textContent = "A little wish is on its way…";
+
+            for (let i = 0; i < 34; i += 1) {
+                const piece = document.createElement("span");
+                piece.className = "confetti-piece";
+                piece.style.left = `${40 + Math.random() * 20}%`;
+                piece.style.background = colors[i % colors.length];
+                piece.style.setProperty(
+                    "--x",
+                    `${(Math.random() - 0.5) * 95}vw`,
+                );
+                piece.style.setProperty("--y", `${-18 - Math.random() * 38}vh`);
+                piece.style.setProperty(
+                    "--r",
+                    `${Math.round((Math.random() - 0.5) * 900)}deg`,
+                );
+                piece.style.animationDelay = `${Math.random() * 0.35}s`;
+                field.appendChild(piece);
+            }
+
+            window.setTimeout(() => {
+                note.classList.add("is-visible");
+                hint.textContent = "The candles are out. Make a wish, Avanti.";
+                document.getElementById("birthday-wish")?.focus();
+            }, 2100);
+        });
+    }
+
+    if (
+        wishInput instanceof HTMLTextAreaElement &&
+        sendWishButton instanceof HTMLButtonElement &&
+        sendWishStatus instanceof HTMLElement
+    ) {
+        sendWishButton.addEventListener("click", async () => {
+            const wish = wishInput.value.trim();
+
+            if (!wish) {
+                sendWishStatus.textContent = "Write your wish first ✨";
+                return;
+            }
+
+            // TODO: Send the wish to the server-side email endpoint.
+            // Future Nodemailer implementation (server-side only):
+            //
+            // const transporter = nodemailer.createTransport({
+            //   host: process.env.SMTP_HOST,
+            //   port: Number(process.env.SMTP_PORT),
+            //   secure: process.env.SMTP_SECURE === "true",
+            //   auth: {
+            //     user: process.env.SMTP_USER,
+            //     pass: process.env.SMTP_PASS,
+            //   },
+            // });
+            //
+            // await transporter.sendMail({
+            //   from: process.env.MAIL_FROM,
+            //   to: process.env.MAIL_TO,
+            //   subject: "A birthday wish for Avanti",
+            //   text: wish,
+            // });
+
+            console.log("Birthday wish:", wish);
+            sendWishStatus.textContent = "Your wish is ready to send 💌";
+            sendWishButton.disabled = true;
+        });
+    }
+</script>

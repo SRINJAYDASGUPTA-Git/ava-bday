@@ -1,249 +1,111 @@
 ---
 import "../styles/global.css";
+import BirthdayFinale from "../components/BirthdayFinale.astro";
+import BeginningSection from "../components/BeginningSection.astro";
+import FirstMeetup from "../components/FirstMeetup.astro";
+import SecondMeetup from "../components/SecondMeetup.astro";
+import Iscoms from "../components/Iscoms.astro";
+import Music from "../components/Music.astro";
+import Football from "../components/Football.astro";
+import Doctor from "../components/Doctor.astro";
+import Hero from "../components/Hero.astro";
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101724" />
-    <meta name="description" content="A little birthday universe for Avanti, written in stars." />
+    <meta
+      name="description"
+      content="A little birthday universe for Avanti, written in stars."
+    />
     <title>Avanti — A Little Universe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400,20,1;9..144,500,20,1;9..144,600,20,1&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400,20,1;9..144,500,20,1;9..144,600,20,1&display=swap"
+      rel="stylesheet"
+    />
     <script is:inline src="https://cdn.tailwindcss.com/3.4.17"></script>
   </head>
   <body class="w-full paper" style="background: rgb(23, 33, 51);">
-<main class="w-full">
-<section class="canva-section starfield chapter flex items-center justify-center text-center" data-template-id="hero-section" id="top" style="min-height: calc(96 * min(var(--vh, 1vh), 1vh)); background: radial-gradient(rgb(48, 63, 90), rgb(16, 23, 36));">
-<div class="glow" style="top:18%;left:12%"></div>
-<div class="orbit hero-orbit"></div>
-<div class="orbit hero-orbit"></div>
-<div class="chapter-inner flex flex-col items-center"><span class="canva-text eyebrow reveal mb-8" data-template-id="hero-kicker" style="color: rgb(228, 205, 164); font-weight: 700; font-style: normal; font-size: 13px;">A birthday story, written in stars</span> <span aria-hidden="true" class="reveal text-[#ddc38e] text-3xl mb-6">✦ &middot; ✧ &middot; ✦</span>
-<h1 class="canva-text chapter-title reveal reveal-delay max-w-4xl" data-template-id="hero-title" style="color: rgb(255, 249, 237); font-weight: 500; font-style: normal; font-size: 34px;">Welcome to Your Little Universe</h1>
-<p class="canva-text serif reveal reveal-delay mt-4" data-template-id="hero-name" style="color: rgb(235, 207, 191); font-weight: 400; font-style: normal; font-size: 28px;">For Avanti, with all my heart.</p>
-<div class="fine-rule my-9"></div>
-<p class="canva-text body-copy max-w-xl" data-template-id="hero-message" style="color: rgb(244, 234, 221); font-weight: 400; font-style: normal; font-size: 17px;">Happy birthday, Avanti. Here is a little place for the memories we hold close, the things you love, and all the beautiful possibilities ahead.</p><a class="canva-link scroll-pill mt-11" data-template-id="hero-scroll" href="#beginning" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Come wander through your story &darr;</a> <a aria-label="Continue to the beginning" class="canva-link section-next mt-12" data-template-id="hero-next" href="#beginning" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Continue &darr;</a>
-</div><span aria-hidden="true" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#dbc89f]">✧</span>
-</section>
-<section class="canva-section chapter paper" data-template-id="beginning-section" id="beginning" style="background: rgb(23, 33, 51);">
-<div class="chapter-inner grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-<div>
-<p class="canva-text eyebrow mb-5" data-template-id="beginning-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 13px;">Chapter one &middot; Where it began</p>
-<h2 class="canva-text chapter-title" data-template-id="beginning-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">A Tender Beginning</h2>
-<div class="fine-rule my-8"></div>
-<p class="canva-text body-copy max-w-lg" data-template-id="beginning-copy" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 18px;">Some connections find a way to feel quietly extraordinary. This chapter is for the beginning of ours, and for every little moment that became something worth keeping.</p>
-<div class="canva-card quiet-card mt-9 p-6 max-w-lg" data-template-id="beginning-note-card" style="background: rgb(37, 46, 61);">
-<p class="canva-text scribble leading-relaxed" data-template-id="beginning-note" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 20px;">Add a first memory here &mdash; the one that still makes you smile.</p>
-</div>
-</div>
-<figure class="lg:rotate-2">
-<div class="photo-frame rounded-xl h-[390px] sm:h-[520px]"><img alt="Softly lit landscape placeholder, ready to replace with a personal photograph" class="canva-image" data-template-id="beginning-photo" loading="lazy" src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"/> <span class="canva-tag photo-tag" data-template-id="beginning-photo-label" style="background: rgb(34, 43, 57); color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 13px;">Replace with your photo</span>
-</div>
-<figcaption class="canva-text mt-5 text-center" data-template-id="beginning-caption" style="color: rgb(196, 185, 182); font-weight: 400; font-style: normal; font-size: 15px;">A space for a memory that belongs to you.</figcaption>
-</figure>
-<div class="flex justify-center mt-12"><a aria-label="Continue to the first meetup" class="canva-link section-next" data-template-id="beginning-next" href="#first-meetup" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div>
-</section>
-<section class="canva-section chapter" data-template-id="meetup-section" id="first-meetup" style="background:#242631">
-<div class="chapter-inner">
-<div class="text-center max-w-2xl mx-auto mb-12">
-<p class="canva-text eyebrow mb-5" data-template-id="meetup-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 13px;">A moment to remember</p>
-<h2 class="canva-text chapter-title" data-template-id="meetup-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">The First Meetup</h2>
-<p class="canva-text body-copy mt-7" data-template-id="meetup-intro" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 18px;">Some moments deserve a page of their own. This one is waiting for the photograph and the words only you can give it.</p>
-</div>
-<figure class="max-w-4xl mx-auto">
-<div class="photo-frame rounded-2xl h-[340px] sm:h-[540px]"><img alt="Warm scenic photograph placeholder for a personal first-meetup photo" class="canva-image" data-template-id="meetup-photo" loading="lazy" src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280"/> <span class="canva-tag photo-tag" data-template-id="meetup-photo-label" style="background: rgb(34, 43, 57); color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 13px;">Your first-meetup photo goes here</span>
-</div>
-<figcaption class="canva-text serif text-center mt-7" data-template-id="meetup-caption" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 23px;">Add a line about what that first meeting meant to you.</figcaption>
-</figure>
-<div class="flex justify-center mt-12"><a aria-label="Continue to the second meeting" class="canva-link section-next" data-template-id="meetup-next" href="#second-meeting" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div><span aria-hidden="true" class="absolute top-12 right-[8%] text-[#d6a9a8] text-4xl">✧</span>
-</section>
-<section class="canva-section chapter second-meeting" data-template-id="second-meeting-section" id="second-meeting" style="background:#1b2636">
-<div class="chapter-inner grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-20 items-center">
-<div>
-<p class="canva-text eyebrow mb-5" data-template-id="second-meeting-kicker" style="color: rgb(215, 184, 120); font-weight: 700; font-style: normal; font-size: 13px;">Another treasured memory</p>
-<h2 class="canva-text chapter-title" data-template-id="second-meeting-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">The Second Meeting</h2>
-<div class="fine-rule my-8"></div>
-<div class="canva-card quiet-card p-6 sm:p-8" data-template-id="second-meeting-detail-card" style="background: rgb(37, 46, 61);">
-<p class="canva-text serif" data-template-id="second-meeting-location" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 24px;">IndiSetu Kolkata Conference</p>
-<p class="canva-text mt-3" data-template-id="second-meeting-date" style="color: rgb(215, 184, 120); font-weight: 600; font-style: normal; font-size: 16px;">15th July 2026</p>
-</div>
-<p class="canva-text scribble body-copy mt-8 max-w-lg" data-template-id="second-meeting-caption" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 22px;">Another moment I&rsquo;m grateful we can hold close.</p>
-</div>
-<figure class="lg:rotate-2">
-<div class="photo-frame rounded-2xl h-[360px] sm:h-[520px]"><img alt="Golden sunset casting an ethereal glow over the Kolkata skyline, creating a captivating silhouette; replace with a personal photograph" class="canva-image" data-template-id="second-meeting-photo" loading="lazy" src="https://images.pexels.com/photos/30274137/pexels-photo-30274137.jpeg"/> <span class="canva-tag photo-tag" data-template-id="second-meeting-photo-label" style="background: rgb(34, 43, 57); color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 13px;">Replace with your photo</span>
-</div>
-</figure>
-<div class="flex justify-center mt-12"><a aria-label="Continue to ISCOMS" class="canva-link section-next" data-template-id="second-meeting-next" href="#iscoms" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div>
-</section>
-<section class="canva-section chapter paper" data-template-id="iscoms-section" id="iscoms" style="background: rgb(23, 33, 51);">
-<div class="chapter-inner">
-<div class="max-w-2xl mb-12">
-<p class="canva-text eyebrow mb-5" data-template-id="iscoms-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 13px;">Chapter two &middot; In the scrapbook</p>
-<h2 class="canva-text chapter-title" data-template-id="iscoms-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">ISCOMS</h2>
-<p class="canva-text body-copy mt-7" data-template-id="iscoms-intro" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 18px;">A whole chapter for the experiences and moments connected to ISCOMS. Leave your favorite photographs and the little details you never want to forget here.</p>
-</div>
-<div class="grid lg:grid-cols-[1.1fr_.9fr] gap-9 lg:gap-14 items-start">
-<figure class="lg:-rotate-2">
-<div class="photo-frame rounded-xl h-[330px] sm:h-[470px]"><img alt="Atmospheric architecture placeholder, ready for an ISCOMS memory photograph" class="canva-image" data-template-id="iscoms-photo-one" loading="lazy" src="https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"/> <span class="canva-tag photo-tag" data-template-id="iscoms-photo-one-label" style="background: rgb(34, 43, 57); color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 13px;">Add an ISCOMS photo</span>
-</div>
-<figcaption class="canva-text mt-5 text-center" data-template-id="iscoms-photo-one-caption" style="color: rgb(196, 185, 182); font-weight: 400; font-style: normal; font-size: 15px;">Add a caption for this moment.</figcaption>
-</figure>
-<div class="space-y-8 lg:pt-12">
-<div class="canva-card quiet-card p-7 sm:p-9" data-template-id="iscoms-note-card" style="background: rgb(37, 46, 61);"><span aria-hidden="true" class="text-[#d7b878] text-2xl">✳</span>
-<h3 class="canva-text serif mt-3" data-template-id="iscoms-note-title" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 25px;">A little memory note</h3>
-<p class="canva-text body-copy mt-3" data-template-id="iscoms-note-copy" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 16px;">What is one small ISCOMS moment you would love to remember together? Write it here.</p>
-</div>
-<figure class="max-w-[440px] lg:ml-auto lg:rotate-3">
-<div class="photo-frame rounded-xl h-[250px] sm:h-[290px]"><img alt="Softly colored notebook placeholder, ready for a second ISCOMS memory photograph" class="canva-image" data-template-id="iscoms-photo-two" loading="lazy" src="https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"/> <span class="canva-tag photo-tag" data-template-id="iscoms-photo-two-label" style="background: rgb(34, 43, 57); color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 13px;">Add another photo</span>
-</div>
-<figcaption class="canva-text mt-4 text-center" data-template-id="iscoms-photo-two-caption" style="color: rgb(196, 185, 182); font-weight: 400; font-style: normal; font-size: 15px;">And another little piece of the story.</figcaption>
-</figure>
-</div>
-</div>
-<div class="flex justify-center mt-12"><a aria-label="Continue to Bengali music" class="canva-link section-next" data-template-id="iscoms-next" href="#music" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div>
-</section>
-<section class="canva-section chapter" data-template-id="music-section" id="music" style="background:#242631">
-<div class="chapter-inner grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-<div>
-<p class="canva-text eyebrow mb-5" data-template-id="music-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 13px;">Chapter three &middot; A song for every feeling</p>
-<h2 class="canva-text chapter-title" data-template-id="music-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">Bengali Music</h2>
-<div class="fine-rule my-8"></div>
-<p class="canva-text body-copy max-w-lg" data-template-id="music-copy" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 18px;">There are songs that seem to hold a feeling for us until we are ready to hear it again. Here is a little corner for the Bengali music you love, and for the memories that live between its notes.</p>
-<p class="canva-text scribble mt-8" data-template-id="music-aside" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 22px;">For all the melodies that feel like home.</p>
-</div>
-<div class="canva-card quiet-card relative overflow-hidden p-8 sm:p-12 min-h-[400px] flex flex-col justify-between" data-template-id="music-card" style="background: rgb(37, 46, 61);">
-<div aria-hidden="true" class="music-lines absolute top-11 left-0 right-0 opacity-70"></div>
-<div aria-hidden="true" class="relative text-[#d5a9b6] text-5xl tracking-[.6em]">
-       &sung; ♫
+    <audio id="birthday-song" loop preload="none">
+      <source src="/audio/hbd.mp3" type="audio/mpeg" />
+    </audio>
+
+    
+
+    <main class="w-full">
+      <button
+      id="music-toggle"
+      class="music-toggle"
+      type="button"
+      aria-pressed="false"
+      aria-label="Play birthday music"
+    >
+      <span id="music-toggle-symbol" class="line-through" aria-hidden="true">♫</span>
+    </button>
+      <!-- Hero -->
+      <Hero />
+
+      <!-- Beginning -->
+      <BeginningSection />
+
+      <!-- First Meetup -->
+      <FirstMeetup />
+
+      <!-- Second Meet -->
+      <SecondMeetup />
+
+      <!-- ISCOMS -->
+      <Iscoms />
+
+      <!-- Music -->
+      <Music />
+
+      <!-- Football -->
+      <Football />
+
+      <!-- Doctor -->
+      <Doctor />
+
+      <!-- Cake -->
+      <BirthdayFinale />
+      <div class="glow" style="bottom:-140px;right:5%;background:#c8947050">
       </div>
-<div class="relative mt-20"><span class="canva-text eyebrow" data-template-id="music-card-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 12px;">Your own little playlist</span>
-<h3 class="canva-text serif mt-4" data-template-id="music-card-title" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 29px;">The songs we keep close</h3>
-<p class="canva-text body-copy mt-4" data-template-id="music-card-copy" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 16px;">Add a favorite song, a lyric, or the memory a melody brings back.</p>
-</div>
-</div>
-<div class="flex justify-center mt-12"><a aria-label="Continue to football" class="canva-link section-next" data-template-id="music-next" href="#football" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div>
-</section>
-<section class="canva-section chapter relative" data-template-id="football-section" id="football" style="background:#131e31">
-<div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(circle at 18% 18%,#c7a26c22,transparent 35%),radial-gradient(circle at 85% 85%,#a9576620,transparent 36%)"></div>
-<div class="chapter-inner">
-<div class="text-center max-w-3xl mx-auto mb-14">
-<p class="canva-text eyebrow mb-5" data-template-id="football-kicker" style="color: rgb(221, 195, 148); font-weight: 700; font-style: normal; font-size: 13px;">A chapter all its own</p>
-<h2 class="canva-text chapter-title" data-template-id="football-title" style="color: rgb(255, 248, 236); font-weight: 500; font-style: normal; font-size: 26px;">The Beautiful Game</h2>
-<p class="canva-text serif mt-7" data-template-id="football-intro" style="color: rgb(242, 223, 195); font-weight: 400; font-style: normal; font-size: 25px;">For the girl who knows that some magic wears the number 10.</p>
-</div>
-<div class="grid md:grid-cols-2 gap-6 lg:gap-9">
-<article class="canva-card football-card flex flex-col" data-template-id="barcelona-card" style="background:#252e3d">
-<div class="football-stripes h-56 flex items-center justify-center relative overflow-hidden">
-<div aria-hidden="true" class="football-ball"></div><span aria-hidden="true" class="absolute top-5 right-7 text-[#f5dfb9] text-3xl">✦</span>
-</div>
-<div class="p-8 sm:p-10 flex-1">
-<p class="canva-text eyebrow mb-4" data-template-id="barcelona-eyebrow" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 12px;">A heart in red and blue</p>
-<h3 class="canva-text serif" data-template-id="barcelona-title" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 33px;">FC Barcelona</h3>
-<p class="canva-text mt-4" data-template-id="barcelona-caption" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 19px;">Blaugrana forever.</p>
-</div>
-</article>
-<article class="canva-card football-card flex flex-col" data-template-id="messi-card" style="background:#252e3d">
-<div class="h-56 flex items-center justify-center relative overflow-hidden" style="background:radial-gradient(circle at center,#354154,#202a3b)"><span aria-hidden="true" class="ten">10</span> <span aria-hidden="true" class="absolute top-5 left-7 text-[#d7b878] text-3xl">✧</span>
-</div>
-<div class="p-8 sm:p-10 flex-1">
-<p class="canva-text eyebrow mb-4" data-template-id="messi-eyebrow" style="color: rgb(215, 184, 120); font-weight: 700; font-style: normal; font-size: 12px;">A number full of wonder</p>
-<h3 class="canva-text serif" data-template-id="messi-title" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 33px;">Lionel Messi</h3>
-<p class="canva-text mt-4" data-template-id="messi-caption" style="color: rgb(223, 201, 159); font-weight: 400; font-style: normal; font-size: 19px;">A little football magic.</p>
-</div>
-</article>
-</div>
-<div class="flex justify-center my-11">
-<span aria-hidden="true" class="text-[#dbbe86] text-3xl">✦</span>
-</div>
-<p class="canva-text serif text-center max-w-3xl mx-auto" data-template-id="football-closing" style="color: rgb(247, 232, 205); font-weight: 400; font-style: normal; font-size: 26px;">May every year bring last-minute winners, beautiful goals, and reasons to cheer.</p>
-<div class="flex justify-center mt-12"><a aria-label="Continue to the future" class="canva-link section-next" data-template-id="football-next" href="#doctor" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div>
-</section>
-<section class="canva-section chapter paper" data-template-id="doctor-section" id="doctor" style="background: rgb(23, 33, 51);">
-<div class="chapter-inner grid lg:grid-cols-[1fr_.8fr] gap-14 lg:gap-24 items-center">
-<div>
-<p class="canva-text eyebrow mb-5" data-template-id="doctor-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 13px;">Chapter four &middot; The road ahead</p>
-<h2 class="canva-text chapter-title" data-template-id="doctor-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">Her Future as a Doctor</h2>
-<div class="fine-rule my-8"></div>
-<p class="canva-text body-copy max-w-xl" data-template-id="doctor-copy" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 18px;">Avanti, the dream you carry matters. I hope you know how deeply I believe in you &mdash; in your care, your courage, and the person you are becoming. Whatever the road asks of you, may you always feel proud of how far your heart can take you.</p>
-<p class="canva-text scribble mt-8" data-template-id="doctor-wish" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 22px;">The world will be brighter for the kindness you bring to it.</p>
-</div>
-<div class="canva-card quiet-card min-h-[380px] flex flex-col items-center justify-center text-center p-9 relative overflow-hidden" data-template-id="doctor-card" style="background: rgb(37, 46, 61);"><span aria-hidden="true" class="absolute top-7 left-8 text-[#d7b878] text-2xl">✧</span>
-<svg aria-hidden="true" class="mb-7" fill="none" height="120" viewbox="0 0 120 120" width="120"><circle cx="60" cy="60" r="49" stroke="#d7b878" stroke-width="1.5"></circle> <path d="M60 35v50M35 60h50" stroke="#e5b7b7" stroke-linecap="round" stroke-width="3"></path> <path d="M23 92c18-11 56-11 74 0" stroke="#d7b878" stroke-linecap="round" stroke-width="1.5"></path>
-</svg>
-<p class="canva-text serif max-w-xs" data-template-id="doctor-card-line" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 25px;">For every future you are brave enough to imagine.</p>
-</div>
-<div class="flex justify-center mt-12"><a aria-label="Continue to the birthday finale" class="canva-link section-next" data-template-id="doctor-next" href="#finale" style="color: rgb(255, 244, 223); font-weight: 600; font-style: normal; font-size: 15px;">Next chapter &darr;</a>
-</div>
-</div>
-</section>
-<section class="canva-section chapter text-center relative overflow-hidden" data-template-id="finale-section" id="finale" style="background:#292532">
-<div class="glow" style="bottom:-140px;right:5%;background:#c8947050"></div>
-<div class="chapter-inner flex flex-col items-center">
-<p class="canva-text eyebrow mb-6" data-template-id="finale-kicker" style="color: rgb(229, 183, 183); font-weight: 700; font-style: normal; font-size: 13px;">One more wish, just for you</p>
-<div aria-label="Illustration of a birthday cake with three glowing candles" class="cake mb-8" id="birthday-cake" role="img">
-<div class="cake-plate"></div>
-<div class="cake-base"></div>
-<div class="cake-icing"></div>
-<div class="candle one"></div>
-<div class="candle two"></div>
-<div class="candle three"></div>
-</div><button aria-describedby="blow-hint" class="canva-button blow-button rounded-full px-7 py-3 font-semibold" data-template-id="blow-candles-button" id="blow-candles" style="background: rgb(215, 184, 120); color: rgb(16, 23, 36); font-weight: 600; font-style: normal; font-size: 16px;" type="button">Blow the candles</button> <span aria-live="polite" class="canva-text mt-3 text-sm" data-template-id="blow-candles-hint" id="blow-hint" style="color: rgb(232, 197, 195); font-size: 14px;"></span>
-<div aria-hidden="true" class="confetti-field" id="confetti-field"></div>
-<div class="birthday-note quiet-card mt-8 w-full max-w-xl p-6 text-left" data-template-id="birthday-note-area" style="background: rgb(37, 46, 61);"><label class="canva-text block mb-3 font-semibold" data-template-id="birthday-note-label" for="birthday-wish" style="color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 16px;">Your birthday note</label> <textarea aria-label="Write your birthday wish here" class="canva-input w-full rounded-xl p-4 leading-relaxed" data-template-id="birthday-wish-input" id="birthday-wish" placeholder="Write your birthday wish here&hellip;" style="color: rgb(248, 241, 230); font-weight: 400; font-style: normal; font-size: 17px;">Write your birthday wish here&hellip;</textarea>
-</div>
-<h2 class="canva-text chapter-title max-w-3xl mt-9" data-template-id="finale-title" style="color: rgb(248, 241, 230); font-weight: 500; font-style: normal; font-size: 26px;">Your Universe, Always</h2>
-<div class="fine-rule my-8"></div>
-<p class="canva-text body-copy max-w-xl" data-template-id="finale-copy" style="color: rgb(223, 214, 204); font-weight: 400; font-style: normal; font-size: 18px;">Happy birthday, Avanti. May you feel loved in the ordinary moments, brave in the uncertain ones, and wonderfully yourself through all of them. Thank you for being the light at the center of this little universe.</p>
-<p class="canva-text serif mt-9 max-w-2xl" data-template-id="finale-wish" style="color: rgb(232, 197, 195); font-weight: 400; font-style: normal; font-size: 25px;">Here&rsquo;s to more stories, more songs, more reasons to celebrate &mdash; and a beautiful year ahead.</p><a class="canva-link scroll-pill mt-12" data-template-id="back-to-top" href="#top" style="color: rgb(248, 241, 230); font-weight: 600; font-style: normal; font-size: 15px;">Back to the stars &uarr;</a> <span aria-hidden="true" class="mt-10 text-[#d6a9a8] text-2xl">✦ &nbsp; ✧ &nbsp; ✦</span>
-</div>
-</section>
-</main>
+    </main>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const cake = document.getElementById('birthday-cake');
-        const button = document.getElementById('blow-candles');
-        const hint = document.getElementById('blow-hint');
-        const field = document.getElementById('confetti-field');
-        const note = document.querySelector('[data-template-id="birthday-note-area"]');
-        if (!cake || !button || !hint || !field || !note) return;
-        const colors = ['#d7b878', '#e5b7b7', '#f8f1e6', '#89a6c4'];
-        button.addEventListener('click', () => {
-          if (button.disabled) return;
-          button.disabled = true;
-          button.setAttribute('aria-pressed', 'true');
-          cake.classList.add('candle-blown');
-          hint.textContent = 'A little wish is on its way…';
-          for (let i = 0; i < 34; i += 1) {
-            const piece = document.createElement('span');
-            piece.className = 'confetti-piece';
-            piece.style.left = `${40 + Math.random() * 20}%`;
-            piece.style.background = colors[i % colors.length];
-            piece.style.setProperty('--x', `${(Math.random() - 0.5) * 95}vw`);
-            piece.style.setProperty('--y', `${-18 - Math.random() * 38}vh`);
-            piece.style.setProperty('--r', `${Math.round((Math.random() - 0.5) * 900)}deg`);
-            piece.style.animationDelay = `${Math.random() * 0.35}s`;
-            field.appendChild(piece);
+      const audio = document.getElementById(
+        "birthday-song",
+      ) as HTMLAudioElement;
+      const button = document.getElementById(
+        "music-toggle",
+      ) as HTMLButtonElement;
+      const label = document.getElementById("music-toggle-label");
+      const symbol = document.getElementById("music-toggle-symbol");
+
+      button?.addEventListener("click", async () => {
+        if (!audio) return;
+
+        if (audio.paused) {
+          try {
+            await audio.play();
+            button.setAttribute("aria-pressed", "true");
+            button.setAttribute("aria-label", "Pause birthday music");
+            symbol?.classList.remove("line-through");
+            if (label) label.textContent = "Pause birthday music";
+          } catch (error) {
+            console.error("Could not play birthday music:", error);
           }
-          window.setTimeout(() => {
-            note.classList.add('is-visible');
-            hint.textContent = 'The candles are out. Make a wish, Avanti.';
-            document.getElementById('birthday-wish')?.focus();
-          }, 2100);
-        });
+        } else {
+          audio.pause();
+          button.setAttribute("aria-pressed", "false");
+          button.setAttribute("aria-label", "Play birthday music");
+          symbol?.classList.add("line-through");
+          if (label) label.textContent = "Play birthday music";
+        }
       });
     </script>
   </body>
