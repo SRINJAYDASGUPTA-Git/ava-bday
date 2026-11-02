@@ -3,20 +3,31 @@
       --charcoal:#242a33; --card:#252e3d; --ivory:#f8f1e6;
       --soft:#dfd6cc; --muted:#c4b9b6; --blush:#e5b7b7;
       --gold:#d7b878; --edge:#d8bd8b45;
+      --font-bengali: Noto Sans Bengali;
     }
     *,*::before,*::after { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; width:100%; color:var(--ivory); font-family:'DM Sans',sans-serif; }
-    .serif { font-family:'Fraunces',Georgia,serif; font-weight:500; }
+    body { margin:0; width:100%; color:var(--ivory); font-family:'DM Sans', 'Noto Sans Bengali', sans-serif; }
+    .serif { font-family:'Fraunces',Georgia,serif, 'Noto Sans Bengali'; font-weight:500; }
     .paper {
       background-color:var(--navy);
       background-image:radial-gradient(#e7d6b713 .7px,transparent .7px);
       background-size:7px 7px;
     }
+
+    .noto-sans-bengali-400 {
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        font-variation-settings:
+                "wdth" 100;
+    }
     .chapter { position:relative; overflow:hidden; padding:clamp(5rem,10vw,9rem) 1.5rem; }
     .chapter-inner { width:100%; max-width:1120px; margin:0 auto; position:relative; z-index:1; }
     .eyebrow { text-transform:uppercase; letter-spacing:.23em; font-weight:700; }
-    .chapter-title { font-family:'Fraunces',Georgia,serif; font-weight:500; line-height:1.12; letter-spacing:-.035em; }
+    .chapter-title { font-family:'Fraunces',Georgia,serif, 'Noto Sans Bengali'; font-weight:500; line-height:1.12; letter-spacing:-.035em; }
     .body-copy { line-height:1.85; }
     .fine-rule { width:74px; height:1px; background:var(--gold); }
     .photo-frame {
