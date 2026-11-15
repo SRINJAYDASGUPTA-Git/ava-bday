@@ -1,3 +1,7 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section
     class="canva-section chapter paper"
     data-template-id="iscoms-section"
@@ -31,7 +35,10 @@
         <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-9 lg:gap-14 items-start">
             <figure class="lg:-rotate-2">
                 <div class="photo-frame rounded-xl h-[330px] sm:h-[470px]">
-                    <img
+                    <Image
+                        height={470}
+                        width={470}
+                        inferSize={true}
                         alt="Atmospheric architecture placeholder, ready for an ISCOMS memory photograph"
                         class="canva-image"
                         data-template-id="iscoms-photo-one"
@@ -73,7 +80,10 @@
                 </div>
                 <figure class="max-w-[440px] lg:ml-auto lg:rotate-3">
                     <div class="photo-frame rounded-xl h-[250px] sm:h-[290px]">
-                        <img
+                        <Image
+                            height={290}
+                            width={290}
+                            inferSize={true}
                             alt="Softly colored notebook placeholder, ready for a second ISCOMS memory photograph"
                             class="canva-image"
                             data-template-id="iscoms-photo-two"

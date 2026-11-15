@@ -1,3 +1,7 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section
         class="canva-section chapter"
         id="talents"
@@ -35,12 +39,15 @@
                 </p>
                 <figure class="mt-10 max-w-[440px] lg:ml-auto lg:rotate-3">
                     <div class="photo-frame rounded-xl h-[250px] sm:h-[290px]">
-                        <img
-                                alt="Softly colored notebook placeholder, ready for a second ISCOMS memory photograph"
-                                class="canva-image"
-                                data-template-id="iscoms-photo-two"
-                                loading="lazy"
-                                src="/images/dance.jpeg"
+                        <Image
+                            height={290}
+                            width={290}
+                            inferSize={true}
+                            alt="Softly colored notebook placeholder, ready for a second ISCOMS memory photograph"
+                            class="canva-image"
+                            data-template-id="iscoms-photo-two"
+                            loading="lazy"
+                            src="/images/dance.jpeg"
                         />
 
                     </div>
@@ -66,12 +73,15 @@
                 </p>
                 <figure class="mt-10 max-w-[440px] lg:ml-auto lg:-rotate-3">
                     <div class="photo-frame rounded-xl h-[250px] sm:h-[290px]">
-                        <img
-                                alt="Softly colored notebook placeholder, ready for a second ISCOMS memory photograph"
-                                class="canva-image"
-                                data-template-id="iscoms-photo-two"
-                                loading="lazy"
-                                src="/images/buddha.jpg"
+                        <Image
+                            height={290}
+                            width={290}
+                            inferSize={true}
+                            alt="Softly colored notebook placeholder, ready for a second ISCOMS memory photograph"
+                            class="canva-image"
+                            data-template-id="iscoms-photo-two"
+                            loading="lazy"
+                            src="/images/buddha.jpg"
                         />
 
                     </div>
